@@ -2,10 +2,33 @@
 <html>
 <head>
 	<title> Hello World HTML </title>
+	<style>
+		body {
+			background-image: url(./background.png);
+		}
+		#profile {
+			width: 100px;
+			height: 80px;
+			position: fixed;
+			top: 0px;
+			right: 2px;
+		}
+		h3 {
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+		table, th, td {
+    		border: 1px solid black;
+    		border-collapse: collapse;
+		}
+		th {
+			text-align: center;
+		}
+	</style>
 </head>
 
 <body>
-	<img src="./Pic_de_neige_cordier_Face_E.jpg" width="50" height="70">
+	<img id="profile" src="./profile.jpg" width="100" height="70">
 	<h1>Chieu Nguyen </h1>
 	<h2><a href="Tel: 623-333-3333"> Tel: 623-698-3283 </a>| <a href="mailto:nbaochieu@gmail.com"> nbaochieu@gmail.com </a> </h2>
 
@@ -17,17 +40,23 @@
 			<li> Arizona State University (2017-present) - Major: Digital Culture (Information Technology)</li>
 		</ul>
 	<h3> Skills </h3>
-		<ul>
-			<li> Adobe Office Suites </li>
-			<li> Photography </li>
-			<li> HTML and CSS </li>
-			<li> 
-		</ul> 
+		<table>
+			<tr>
+				<th> Programming </th>
+				<th> Softwares </th>
+				<th> Platforms </th>
+			</tr>
+			<tr>
+				<td> HTML, CSS </td>
+				<td> Adobe Photoshop, Illustrator, Indesign, Microsoft Office Suite </td>
+				<td> Microsoft Windows, MacOS </td>
+			</tr>	 
+		</table>
 	<h3> Projects </h3>
 	<h3> References </h3>
 		<ol>
-			Sadie Jarvis
-			Thomas Jelani
+			<li> Sadie Jarvis </li>
+		 	<li> Thomas Jelani </li>
 		</ol>
 </body>
 
