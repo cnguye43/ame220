@@ -1,0 +1,62 @@
+body {
+	font-family: Georgia;
+}
+div.container {
+	width: 80%;
+	margin: auto;
+}
+
+#leftcol {
+	display: block;
+	float: left;
+	width: 350px;
+	height: 768px;
+	padding: 1em;
+	margin: 10px;
+	background-color: #f9e0eb;
+	position: relative;
+}
+
+#rightcol {
+	margin-left: 400px;
+	border-left: 1px solid #f44256;
+    padding: 1.5em;
+    padding-top: 100px;
+    background-color: #f9f7f7;
+}
+
+#profile {
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	top: 200px;
+	left: 110px;
+}
+
+#info {
+	margin-top: 230px;
+}
+
+h3 {
+	text-decoration: underline;
+	text-transform: uppercase;
+	color: #f44256;
+}
+
+.year {
+	font-style: italic;
+	float: right;
+	font-size: 14px;
+}
+
+table, th, td {
+	margin: auto;
+    border: 1px solid black;
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+th {
+	text-align: center;
+}
+
