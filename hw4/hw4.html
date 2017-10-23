@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='hw4.js'> </script>
+<link rel="stylesheet" type="text/css" href="hw4.css">
+
+<script>
+var loginClicked = function()
+{
+  dialogLib.login.show("Log In", "User Name:", "Password:", "Log in", "Cancel", function(data1, data2){alert("Do you want to save your account information?\nUser Name: " + data1 + "\nPassword: "+ data2)}, function(){alert("Login Canceled")});
+}
+
+function signupClicked()
+{
+  dialogLib.signup.show("Sign Up", "User Name:", "Password:", "Sign up", "Cancel", function(data1, data2){alert("Do you want to save your account information?\nUser Name: " + data1 + "\nPassword: " + data2)}, function(){alert("Signup Canceled")});
+}
+</script>
+</head>
+
+<body>
+  <button onclick= 'loginClicked()'> Login </button>
+  <button onclick= 'signupClicked()'> Signup </button>
+</body>
+
+
+</html>

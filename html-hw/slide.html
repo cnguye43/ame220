@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <title>Slide Show</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    var current = 0;
+    function start(){
+      $(".container .slide").fadeOut(0);
+      $(".container .slide:nth-of-type(1)").fadeIn(0);
+    }
+    function goNextSlide(){
+      var next = (current + 1)%4;
+      $(".container .slide:nth-of-type(" + (current + 1)+ ")").stop().css({"display": "none"}) // fade current slide
+      $(".container .slide:nth-of-type(" + (next+ 1)+ ")").stop().css({"display": "block"}) // fadein next slide
+      current = next; // set new current slide
+    }
+    function goPrevSlide(){
+      var next = (current + 1)%4;
+      $(".container .slide:nth-of-type(" + (current + 1)+ ")").stop().css({"display": "none"}) // fade current slide
+      $(".container .slide:nth-of-type(" + (next+ 1)+ ")").stop().css({"display": "block"}) // fadein next slide
+      current = next; // set new current slide    
+    }
+  </script>
+  <style>
+    .container
+    {
+       height: 100%;
+       width: 100%;
+       position: absolute;
+    }
+    .slide{
+       margin: auto;
+       display: block;
+       width: 100%;
+       height: 100%;
+       background-position: 50%;
+       background-repeat: no-repeat;
+       background-size: contain;
+    }
+    .navB{
+        position: absolute;
+        top: calc(50% - 20px);
+    }
+    #prev{
+        left: 10px;
+    }
+    #next{
+        right: 10px;
+    }
+  </style>
+</head>
+
+
+<body onload='start()'>
+  <div class='container'>
+    <div class='slide' style='background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Cuban_green_woodpecker_%28Xiphidiopicus_percussus_percussus%29_female.JPG/450px-Cuban_green_woodpecker_%28Xiphidiopicus_percussus_percussus%29_female.JPG)'> </div>
+    <div class='slide' style='background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Pied-winged_swallow_%28Hirundo_leucosoma%29.jpg/675px-Pied-winged_swallow_%28Hirundo_leucosoma%29.jpg)'>  </div>
+    <div class='slide' style='background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Rufous-tailed_flycatcher_%28Myiarchus_validus%29.JPG/539px-Rufous-tailed_flycatcher_%28Myiarchus_validus%29.JPG)'>  </div>
+    <div class='slide' style='background-image:url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Malachite_kingfisher_%28Corythornis_cristatus%29.jpg/450px-Malachite_kingfisher_%28Corythornis_cristatus%29.jpg)'>  </div>
+  </div>
+  <button onclick="goPrevSlide()" class='navB' id='prev'> < </button>
+  <button onclick="goNextSlide()" class='navB' id='next'> > </button>
+</body>
+
+</html>
